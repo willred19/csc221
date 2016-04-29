@@ -14,18 +14,6 @@ class YearTest(unittest.TestCase):
 
 
 
-from dna import to_rna
-def test_transcribes_guanine_to_cytosine(self):
-        self.assertEqual('C', to_rna('G'))
-
-def test_transcribes_guanine_to_cytosine(self):
-        self.assertEqual('G', to_rna('C'))
-
-def test_transcribes_guanine_to_cytosine(self):
-        self.assertEqual('A', to_rna('T'))
-
-def test_transcribes_guanine_to_cytosine(self):
-        self.assertEqual('U', to_rna('A'))
 
 
 
