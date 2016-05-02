@@ -1,20 +1,24 @@
-complements   = { 'G' : 'C',
-                  'C' : 'G',
-                  'T' : 'A',
-                  'A' : 'T'}
+
 
 def to_rna(dna):
-    ''' Generate the complementary RNA strand from the given DNA strand
-
-    >>> to_rna("GCTA")
-    'CGAT'
-    >>> to_rna("gcta")
-    'cgat'
-    >>> to_rna("gc TA")
-    'cg AT'
+    return ','.join(complements[nucleotide] for nucleotide in dna)
     '''
-    rna = ''
-    for c in dna:
-        rna = rna + complements[c]
-    return rna
+    >>>to_rna('C')
+    'G'
+    >>>to_rna('t')
+    'a'
+    >>>to_rna('g')
+    'c'
+    >>>to_rna('T')
+    'A'
+    >>>to_rna('ccc')
+    'ggg'
+    >>>to_rna('At Cg'
+    'Ua Gc'
+    '''
+
+complements   = {'G':'C','C' : 'G',
+                  'T' : 'A','A' : 'U',
+                  'a' : 'u','c' : 'g',
+                  'g' : 'c','t' : 'a'}
 
